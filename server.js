@@ -7,7 +7,18 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
+// CORS configuration - restrict to frontend origins
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173", // local dev
+      "https://remotage-frontend.vercel.app" // production
+    ],
+    credentials: true,
+  })
+);
+
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
