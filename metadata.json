@@ -1,0 +1,8 @@
+{
+  "name": "Remotage - Scalable Virtual Assistance",
+  "description": "High-performance virtual assistance for solo-founders and scaling businesses, featuring a live AI-integrated CMS.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
